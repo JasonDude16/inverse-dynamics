@@ -1,5 +1,5 @@
 # Biomechanics-Lab-3
-The scripts in this repository calculate inverse dynamics from analog force plate and marker position data, which had a sampling frequency (Fs) of 100 Hz. 
+The scripts in this repository calculate inverse dynamics from analog and marker position data, which each had a sampling frequency (Fs) of 100 Hz. 
 
 The jdmodel.m is the main script file. This file loads the data, creates a data summary and creates the plots that are depicted below. The dataSummary function assigns markers to anatomical joints, calculates segment angular velocities and accelerations, joint angular velocities, center of mass acceleration for each segment, mass and inertia terms, stride length, cadence, and joint power.
 
