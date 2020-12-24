@@ -1,7 +1,7 @@
 # Biomechanics-Lab-3
 These scripts were created for an Advanced Biomechanics (6390) lab assignment at the University of Utah.
 
-[Lab03_Jason_Dude.pdf](Lab03_Jason_Dude.pdf) is the corresponding lab report for this analysis 
+You can read my lab report for this analysis by clicking on the [Lab03_Jason_Dude.pdf](Lab03_Jason_Dude.pdf) file. 
 
 The scripts in this repository calculate inverse dynamics from analog and marker position data, which each had a sampling frequency (Fs) of 100 Hz.
 
