@@ -3,7 +3,7 @@ These scripts were created for an Advanced Biomechanics (6390) lab assignment at
 
 You can read my lab report for this analysis by clicking on the [Lab03_Jason_Dude.pdf](Lab03_Jason_Dude.pdf) file. 
 
-The scripts in this repository calculate inverse dynamics from analog and marker position data, which each had a sampling frequency (Fs) of 100 Hz.
+The scripts in this repository calculate inverse dynamics from analog and marker position data.
 
 The [jdmodel.m](jdmodel.m) is the main script file. This file loads the data, creates a data summary and creates the plots that are depicted below. The plots show the power and moments of the ankle, knee, and hip during one complete gait cycle during normal and fast walking speeds of one participant. 
 
