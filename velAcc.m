@@ -1,7 +1,7 @@
 function [v, a] = velAcc(pos, Fs)
 
-%% This function will calculate the linear velocity and linear acceleration
-%% based on positional data pos and sampling frequency Fs
+% This function will calculate the linear velocity and linear acceleration
+% based on positional data pos and sampling frequency Fs
 
 dt = 1/Fs; 
 [s1, s2] = size (pos);

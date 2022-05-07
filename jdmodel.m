@@ -2,7 +2,7 @@
 clear all
 close all
 clc 
-addpath('/Users/JasonDude/Desktop/Code/Biomechanics/Lab-3-Matlab')
+cd('/Users/jason/Documents/projects/Biomechanics-Lab-3')
 
 %% Create and apply a summary function for both data files
 n = load('normal.mat');
