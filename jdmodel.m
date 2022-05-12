@@ -1,5 +1,4 @@
 %% Lab 3 Main Script
-cd('/Users/jason/Documents/projects/Biomechanics-Lab-3')
 n = load('normal.mat');
 f = load('fast.mat');
 
