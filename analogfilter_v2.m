@@ -1,12 +1,14 @@
 %Filter FP analog data
 function [GRF,COPx,COPz]= analogfilter_v2(analogdata)
-%load('normal.mat');
+
 h=.002;
+
 %filter analog force plate data
 [a,b]=butter(2,10/500);
 filterdata=filtfilt(a,b,analogdata);
 DSfilterdata=downsample(filterdata,10);
 RawData=DSfilterdata/2;
+
 % Forceplate calibration matrix
 c = [ 863.0   -11.2    -5.5    0.1    2.5   -3.3;...
        22.6   855.5   -13.4   -7.5    6.0   -3.7;...
@@ -14,7 +16,6 @@ c = [ 863.0   -11.2    -5.5    0.1    2.5   -3.3;...
        -3.4   -72.9    -2.6  908.3   -2.7    2.8;...
        73.8    -3.3     0.1   -1.5  908.9    6.5;...
         1.8    -5.0     1.4    3.8    3.3  302.1];
-
 
 Force=c*RawData';
 
@@ -34,6 +35,7 @@ end
 
 COPx=-x+.45;
 COPz=-y+.45;
+
 F2V=[0  -1  0   0   0   0;
     -1  0   0   0   0   0;
     0   0   -1  0   0   0;
@@ -46,13 +48,15 @@ V2I=[0  1   0   0   0   0;
     0   0   0   0   1   0;
     0   0   0   0   0   1;
     0   0   0   1   0   0];
+
 ForceGCS = V2I*F2V*Force;
 GRF=-ForceGCS;
+
 for m=1:length(COP_exists)
-    if COP_exists(m,1)<=0;
+    if COP_exists(m,1)<=0
         COPx(m,1)=0;
         COPz(m,1)=0;
-        for q=1:6;
+        for q=1:6
             GRF(q,m)=0;
         end
     end
